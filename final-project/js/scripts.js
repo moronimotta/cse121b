@@ -190,7 +190,7 @@ function displayReviewModal(title, id) {
 }
 
 function viewReview(id) {
-    const review = reviews.find(review => review.newId === id);
+    const review = reviews.filter(review => review.newId === id)[0];
 
     if (review) {
         if (review.spoiler) {
